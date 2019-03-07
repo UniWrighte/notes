@@ -10,5 +10,12 @@ def randomSong(size):
 		song.append(notes[index])
 	return song
 
-song = randomSong(30)
-print(song)
+def generateMany(numberOfSongs, min, max):
+	songs = []
+	for i in range(numberOfSongs):
+		size = random.randint(min, max)
+		songs.append(randomSong(size))
+	return songs
+
+songs = generateMany(30, 10, 100)
+print(songs)
